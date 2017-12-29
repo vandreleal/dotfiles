@@ -13,6 +13,11 @@
 #     ./node_modules/.bin/webpack --config webpack.local.config.js
 #
 
+###############################################################################
+# NVM                                                                         #
+###############################################################################
+git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm && source ~/.zsh-nvm/zsh-nvm.plugin.zsh
+
 if test ! $(which nvm)
 then
   echo "Installing a stable version of Node..."
@@ -39,6 +44,7 @@ npm config set save-exact = true
 # git-recent — Type `git recent` to see your recent local git branches
 # git-open — Type `git open` to open the GitHub page or website for a repository
 packages=(
+    trash-cli
     diff-so-fancy
     git-recent
     git-open

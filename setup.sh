@@ -241,7 +241,6 @@ main() {
     'crlf'
     'dups'
     'git-delete-merged-branches'
-    'nyan'
     'passive'
     'proofread'
     'ssh-key'
@@ -301,17 +300,9 @@ install_zsh () {
   fi
 }
 
-# Package managers & packages
-
-# . "$DOTFILES_DIR/install/brew.sh"
-# . "$DOTFILES_DIR/install/npm.sh"
-
-# if [ "$(uname)" == "Darwin" ]; then
-    # . "$DOTFILES_DIR/install/brew-cask.sh"
-# fi
-
 main
 # install_zsh
+
 
 ###############################################################################
 # Atom                                                                        #
@@ -324,26 +315,29 @@ main
 #apm list --installed --bare - get a list of installed packages
 #apm install --packages-file $HOME/.atom/packages.list
 
-###############################################################################
-# Zsh                                                                         #
-###############################################################################
-
-# Install Zsh settings
-ln -s ~/dotfiles/zsh/themes/nick.zsh-theme $HOME/.oh-my-zsh/themes
-
 
 ###############################################################################
-# Terminal & iTerm 2                                                          #
+# Zsh / Terminal / iTerm 2                                                    #
 ###############################################################################
 
-# Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
+# Install Powerlevel9k theme
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
-# Install the Solarized Dark theme for iTerm
-open "${HOME}/dotfiles/iterm/themes/Solarized Dark.itermcolors"
+# Install Powerline fonts
+git clone https://github.com/powerline/fonts.git --depth=1 "${HOME}/dotfiles/iterm/fonts"
+source "${HOME}/dotfiles/iterm/fonts/install.sh" && rm -rf "${HOME}/dotfiles/iterm/fonts"
+
+# Clone iTerm2-Color-Schemes
+git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git --depth=1 "${HOME}/dotfiles/iterm/themes"
+
+# Install theme for iTerm
+open "${HOME}/dotfiles/iterm/themes/schemes/Snazzy.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+# Only use UTF-8 in Terminal.app
+defaults write com.apple.terminal StringEncodings -array 4
 
 # Reload zsh settings
 source ~/.zshrc

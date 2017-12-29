@@ -20,16 +20,11 @@ cp ~/.extra ~/migration/home
 cp ~/.z ~/migration/home
 cp -R ~/.ssh ~/migration/home
 cp /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist ~/migration  # wifi
-cp ~/Library/Preferences/net.limechat.LimeChat.plist ~/migration
-cp ~/Library/Preferences/com.tinyspeck.slackmacgap.plist ~/migration
 cp -R ~/Library/Services ~/migration # automator stuff
 cp -R ~/Documents ~/migration
 cp ~/.bash_history ~/migration # back it up for fun?
 cp ~/.gitconfig.local ~/migration
 cp ~/.z ~/migration # z history file.
-
-# sublime text settings
-cp "~/Library/Application Support/Sublime Text 3/Packages" ~/migration
 
 
 # iTerm settings.
@@ -90,10 +85,11 @@ $HOME/dotfiles/install/brew-cask.sh
 
 $HOME/dotfiles/install/npm.sh
 
-# Type `git open` to open the GitHub page or website for a repository.
-npm install -g git-open
-# trash as the safe `rm` alternative
-npm install -g trash-cli
+
+###############################################################################
+# RVM                                                                         #
+###############################################################################
+\curl -sSL https://get.rvm.io | bash -s stable --ruby && source $HOME/.rvm/scripts/rvm
 
 
 ###############################################################################
@@ -114,15 +110,6 @@ bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/inst
 # or use autojump instead https://github.com/wting/autojump
 git clone https://github.com/rupa/z.git ~/z
 chmod +x ~/z/z.sh
-
-
-# my magic photobooth symlink -> dropbox. I love it.
-#    + first move Photo Booth folder out of Pictures
-#    + then start Photo Booth. It'll ask where to put the library.
-#    + put it in Dropbox/public
-#   * Now… you can record photobooth videos quickly and they upload to dropbox DURING RECORDING
-#   * then you grab public URL and send off your video message in a heartbeat.
-
 
 # for the c alias (syntax highlighted cat)
 sudo easy_install Pygments

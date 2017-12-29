@@ -8,7 +8,7 @@
 #
 
 # Set computer name
-COMPUTERNAME="Nick Plekhanov's MBP"
+COMPUTERNAME="VLC-MBP"
 HOSTNAME='mbp'
 LOCALHOSTNAME='mbp'
 
@@ -113,8 +113,8 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # Set language and text formats. (USD and Imperial Units)
 defaults write -g AppleLanguages -array "en" "nl"
 defaults write -g AppleLocale -string "en_US@currency=USD"
-defaults write -g AppleMeasurementUnits -string "Inches"
-defaults write -g AppleMetricUnits -bool false
+defaults write -g AppleMeasurementUnits -string "Centimeters"
+defaults write -g AppleMetricUnits -bool true
 
 ###############################################################################
 # Screen
@@ -216,11 +216,8 @@ sudo pmset -a sms 0
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
-# Add several spacers
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+# Add dock space
+# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 # Automatically hide and show the Dock
 # defaults write com.apple.dock autohide -bool true

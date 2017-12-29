@@ -45,6 +45,7 @@ parse_git_branch() {
 # * ~/.extra can be used for other settings you don’t want to commit.
 
 source ~/.bash_prompt
+source ~/.profile
 
 for file in ~/.{bash_prompt}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
