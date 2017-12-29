@@ -326,6 +326,7 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 # Install Powerline fonts
 git clone https://github.com/powerline/fonts.git --depth=1 "${HOME}/dotfiles/iterm/fonts"
 source "${HOME}/dotfiles/iterm/fonts/install.sh" && rm -rf "${HOME}/dotfiles/iterm/fonts"
+# https://github.com/gabrielelana/awesome-terminal-fonts/wiki/OS-X
 
 # Clone iTerm2-Color-Schemes
 git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git --depth=1 "${HOME}/dotfiles/iterm/themes"
