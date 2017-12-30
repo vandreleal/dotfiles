@@ -19,8 +19,28 @@
   "exception-reporting":
     userId: "ef806534-1f49-423f-8515-7fc2d3c60ce7"
   "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        blue: "#caa9fb"
+        cyan: "#9aedfe"
+        green: "#5af68d"
+        magenta: "#ff92d1"
+        red: "#ff6e67"
+        white: "#c7c7c7"
+        yellow: "#f4f89d"
+      zBright:
+        brightBlack: "#686868"
+        brightBlue: "#c9a8fa"
+        brightCyan: "#99ecfd"
+        brightGreen: "#5af58c"
+        brightMagenta: "#ff92d1"
+        brightRed: "#fe6e67"
+        brightYellow: "#f4f89d"
+    core: {}
     style:
-      fontSize: "14"
+      fontFamily: "Meslo LG S for Powerline"
+      fontSize: "12"
+      theme: "one-dark"
   wakatime:
     apikey: "Enter your api key..."
   welcome:

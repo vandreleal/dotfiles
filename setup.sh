@@ -332,7 +332,10 @@ source "${HOME}/dotfiles/iterm/fonts/install.sh" && rm -rf "${HOME}/dotfiles/ite
 git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git --depth=1 "${HOME}/dotfiles/iterm/themes"
 
 # Install theme for iTerm
-open "${HOME}/dotfiles/iterm/themes/schemes/Snazzy.itermcolors"
+open "${HOME}/dotfiles/iterm/themes/schemes/Dracula.itermcolors"
+
+# Install theme for Terminal
+open "${HOME}/dotfiles/iterm/themes/terminal/Dracula.terminal"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false

@@ -36,25 +36,18 @@ parse_git_branch() {
 #   Change Prompt
 #   ------------------------------------------------------------
 
-
-#  export PS1="\n________________________________________________________________________________\n$BLUEBOLD\$(parse_git_branch) $RED\w $PURPLE@ $GREEN\h $GREENBOLD(\u) $RESETCOLOR=> $WHITE"
-
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 
-source ~/.bash_prompt
+# source ~/.bash_prompt
+source ~/.bashrc
 source ~/.profile
 
 for file in ~/.{bash_prompt}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
-
-
-
-
 
 #   Set Paths
 #   ------------------------------------------------------------
@@ -77,12 +70,14 @@ unset file;
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
 
+# Set colors to match iTerm2 Terminal Colors
+  export TERM=xterm-256color
+
 
 #   -----------------------------
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
 
-alias subl='/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
 alias ls='ls -GFhl'
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
