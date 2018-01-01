@@ -75,21 +75,21 @@ fi
 # Homebrew                                                                    #
 ###############################################################################
 
-$HOME/dotfiles/install/brew.sh
-$HOME/dotfiles/install/brew-cask.sh
+source "$HOME/dotfiles/install/brew.sh"
+source "$HOME/dotfiles/install/brew-cask.sh"
 
 
 ###############################################################################
 # Node                                                                        #
 ###############################################################################
 
-$HOME/dotfiles/install/npm.sh
+source "$HOME/dotfiles/install/npm.sh"
 
 
 ###############################################################################
 # RVM                                                                         #
 ###############################################################################
-\curl -sSL https://get.rvm.io | bash -s stable --ruby && source $HOME/.rvm/scripts/rvm
+bash < <( curl https://get.rvm.io) && source $HOME/.rvm/scripts/rvm
 
 
 ###############################################################################

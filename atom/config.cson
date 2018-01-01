@@ -10,6 +10,9 @@
       indent_size: 2
   core:
     destroyEmptyPanes: false
+    disabledPackages: [
+      "tree-view"
+    ]
     telemetryConsent: "limited"
     titleBar: "custom"
   editor:

@@ -40,7 +40,6 @@ parse_git_branch() {
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 
-# source ~/.bash_prompt
 source ~/.bashrc
 source ~/.profile
 
